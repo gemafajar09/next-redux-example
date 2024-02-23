@@ -1,4 +1,3 @@
-
 import {
     logout as logOut,
     login as logIn,
@@ -8,7 +7,6 @@ import { setCookie, removeCookie } from '../utils/cookie';
 
 import http from "../server/configAxios"
 import { Navigate } from '../server/navigator';
-
 
 export const Login = (email, password) => async(dispatch) => {
     var dataLogin = {
@@ -51,7 +49,7 @@ export const getUser = () => async(dispatch) => {
 
 export const Logout = () => {
     return (dispatch) => {
-        removeCookie('token','push');
+        removeCookie('token');
         dispatch(logOut())
     }
 }
