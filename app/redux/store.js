@@ -1,13 +1,12 @@
 "use client";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import counterReducer from "./reducers/counterSlice";
+import LoginReducer from "./reducers/loginReducer";
 
 
 const rootReducer = combineReducers({
-    counter: counterReducer,
+    login : LoginReducer
 }, );
 
 export const store = configureStore({
     reducer: rootReducer,
-
 });
