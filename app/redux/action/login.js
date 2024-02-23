@@ -35,9 +35,9 @@ export const Login = (email, password) => async(dispatch) => {
 
 export const getUser = () => async(dispatch) => {
     try {
-        await http.get(`getuser`)
+        await http.get(`home`)
         .then((res) => {
-            dispatch(dataUser(res.data.data))
+            dispatch(dataUser(res.data.data.response))
         })
         .catch((err) => {
             Promise.reject(err)
